@@ -18,13 +18,21 @@
         "no-console": 0,
         "new-cap": 0,
         "strict": 0,
-        "no-nunderscore-dangle": 0,
+        "no-underscore-dangle": 0,
         "no-user-before-define": 0,
         "eol-last": 0,
         "quotes": [2, "double"],
         "jsx-quotes": 1,
         "react/jsx-no-undef": 1,
         "react/jsx-uses-react": 1,
-        "react/jsx-uses-vars": 1
+        "react/jsx-uses-vars": 1,
+        "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+        "require-jsdoc": ["error", {
+            "require": {
+                "FunctionDeclaration": false,
+                "MethodDefinition": false,
+                "ClassDeclaration": false
+            }
+        }]
     }
 }
