@@ -2,7 +2,202 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Webpack React Boilerplate</title>
+        <title>Sabrina Renee's Cakes</title>
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two:400i|Raleway:100,400|Quicksand:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/font-awesome-4.6.3/css/font-awesome.min.css">
+        <style media="screen">
+            html,
+            body,
+            #app {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                /*background: #FFF;*/
+                font-family: 'Quicksand', sans-serif;
+                background: url('/styles/images/symphony.png');
+            }
+
+            .group {
+                display: table;
+                content: '';
+                clear: both;
+            }
+            .center-text {
+                text-align: center;
+            }
+            .fl {
+                float: left;
+            }
+
+            .splash-container {
+                height: 100%;
+                width: 100%;
+                padding: 80px;
+                box-sizing: border-box;
+                opacity: 1;
+                transition: all ease 1s;
+                z-index: 10;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .splash-container-hidden {
+                opacity: 0;
+                z-index: -10
+            }
+            .splash-main {
+                background: linear-gradient(-45deg, #8e5f54 -5%, #4E342E 60%);
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .splash-heading {
+                font-size: 3em;
+                font-family: 'Lobster Two', cursive;
+                color: #FFF;
+                letter-spacing: 2px;
+                font-weight: 300;
+            }
+
+            .sc-button {
+                outline: none;
+                padding: 5px;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-right: 10px;
+            }
+
+            .sc-button-normal {
+                border: 1px solid #4E342E;
+                background-color: #FFF;
+                color: #4E342E;
+            }
+            .sc-button-invert {
+                border: 1px solid #FFF;
+                background-color: #4E342E;
+                color: #FFF;
+            }
+            .splash-button {
+                font-size: 2em;
+                padding: 10px 20px;
+                font-weight: lighter;
+            }
+
+            .app-container {
+                padding: 0 4% 4% 4%;
+                height: 100%;
+                box-sizing: border-box;
+                position: relative;
+            }
+
+            .main-site-wrapper {
+                opacity: 1;
+            }
+            .main-site-wrapper .hidden {
+                opacity: 0;
+            }
+
+            .site-header {
+                text-align: center;
+                font-size: 1.5em;
+                font-family: 'Lobster Two', cursive;
+                color: #4E342E;
+                height: 13%;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .site-header h1 {
+                font-weight: normal;
+            }
+
+            .main-content-wrapper {
+                /*background-color: #4E342E;*/
+                background: linear-gradient(-45deg, #8e5f54 -5%, #4E342E 60%);
+                height: 87%;
+                box-sizing: border-box;
+                color: #eee4e2;
+            }
+
+            .nav-bar {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Raleway', sans-serif;
+                font-size: 1.2em;
+                font-weight: 100;
+                height: 10%;
+            }
+
+            ul.nav {
+                padding: 0;
+                list-style-type: none;
+                text-transform: uppercase;
+            }
+
+            ul.nav li {
+                float: left;
+                margin-right: 50px;
+            }
+            ul.nav li.active span.menu-item {
+                font-weight: 400;
+            }
+            ul.nav li:not(:last-child):after {
+                content: '|';
+                margin-left: 50px;
+            }
+            ul.nav li:last-child {
+                margin-right: 0;
+            }
+
+            .events-list-wrapper {
+                width: 100%;
+                height: 90%;
+            }
+            .events-list-container {
+                width: 80%;
+                margin: 0 auto;
+                max-height: 80%;
+                padding-right: 10px;
+                overflow-y: auto;
+            }
+            .event-list {
+                box-sizing: border-box;
+            }
+            .event-item {
+                box-sizing: border-box;
+                margin: 0 0 20px 0;
+            }
+            .event-heading {
+                background-color: #6BB9F0;
+                color: #4E342E;
+                padding: 8px;
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .event-item h1 {
+                font-size: 1.2em;
+                margin: 0;
+                box-sizing: border-box;
+                font-weight: 400;
+            }
+            .event-image {
+                vertical-align: top;
+                float: left;
+                margin: 0 10px 0 0;
+            }
+        </style>
     </head>
     <body>
         <div id="app"></div>
